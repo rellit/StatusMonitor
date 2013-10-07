@@ -1,0 +1,90 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.item {
+	margin: 4px 4px 0px 4px;
+	width: 610px;
+	float: left;
+	/*box-shadow: 1px 1px 1px #DDDDDD;
+	border: 1px solid #DDDDDD;*/
+	display: table;
+	padding: 0px 8px 0px 8px;
+	background-repeat: no-repeat;
+	background-position: 8 50%;
+	overflow: hidden;
+}
+
+.kunde {
+	font-family: sans-serif;
+	font-size: 30px;
+	vertical-align: middle;
+	display: table-cell;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 70px;
+	width: 105px;
+	float: left;
+}
+
+.bereich {
+	font-family: sans-serif;
+	font-size: 30px;
+	vertical-align: middle;
+	display: table-cell;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 70px;
+	width: 145px;
+	float: left;
+}
+
+.message {
+	font-family: sans-serif;
+	font-size: 30px;
+	vertical-align: middle;
+	display: table-cell;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 70px;
+	width: 360px;
+	float: left;
+}
+
+.action {
+	background-color: #8BAFD4;
+}
+
+.info {
+	background-color: #EEEEEE;
+}
+
+.ok {
+	background-color: #37DD6F;
+}
+
+.warn {
+	background-color: #FFBD40;
+}
+
+.error {
+	background-color: #FF5555;
+}
+/*
+.info {
+	background-color: #eeeeee;
+}
+
+.ok {
+	background-color: #90ee90;
+}
+
+.warn {
+	background-color: #f0e68c;
+}
+
+.error {
+	background-color: #ffb6c1;
+}
+*/

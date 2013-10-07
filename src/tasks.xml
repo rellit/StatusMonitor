@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" ?>
+<StatusServer>
+	<tasks>
+		<task>
+			<!-- This task-class will execute a SQL-statement, displaying each result row as one message -->
+			<className>de.timherbst.statusserver.api.tasks.LoadFromDBStatusMessageTask
+			</className>
+			<kunde>Kunde</kunde>
+			<bereich>Bereich</bereich>
+			<properties>
+				<property>
+					<!-- The JDBC-driver class needed to connect to database -->
+					<key>driver</key>
+					<value>[Driver Class]</value>
+				</property>
+				<property>
+					<!-- The connection string needed to connect to database -->
+					<key>jdbcString</key>
+					<value>[JDBC-Connection String]</value>
+				</property>
+				<property>
+					<!-- The user needed to connect to database -->
+					<key>user</key>
+					<value>[User]</value>
+				</property>
+				<property>
+					<!-- The password needed to connect to database -->
+					<key>pass</key>
+					<value>[Password]</value>
+				</property>
+				<property>
+					<!-- The SCL-Statement to execute -->
+					<key>SQL</key>
+					<value><![CDATA[select STATUS, MESSAGE FROM TABLE]]></value>
+				</property>
+				<property>
+					<!-- This column will be displayed as message -->
+					<key>messageColumn</key>
+					<value>MESSAGE</value>
+				</property>
+				<property>
+					<!-- This column will define the Message Type -->
+					<key>typeColumn</key>
+					<value>STATUS</value>
+				</property>
+				<property>
+					<!-- Messagetype INFO, when <typeColumn> equals the given value -->
+					<key>infoValue</key>
+					<value>1</value>
+				</property>
+				<property>
+					<!-- Messagetype OK, when <typeColumn> equals the given value -->
+					<key>okValue</key>
+					<value>4</value>
+				</property>
+				<property>
+					<!-- Messagetype ACTION, when <typeColumn> equals the given value -->
+					<key>actionValue</key>
+					<value>7</value>
+				</property>
+				<property>
+					<!-- Messagetype WARN, when <typeColumn> equals the given value -->
+					<key>warnValue</key>
+					<value>3</value>
+				</property>
+				<property>
+					<!-- Messagetype ERROR, when <typeColumn> equals the given value -->
+					<key>errorValue</key>
+					<value>2</value>
+				</property>
+			</properties>
+		</task>
+		<!-- This task-class will display the current date&time. Useful for showing the last refresh time -->
+		<task>
+			<className>de.timherbst.statusserver.api.tasks.CurrentDateStatusMessageTask
+			</className>
+			<kunde>Kunde</kunde>
+			<bereich>Aktuelles Datum</bereich>
+		</task>
+		<!-- This task-class will display a given text -->
+		<task>
+			<className>de.timherbst.statusserver.api.tasks.TextStatusMessageTask</className> 
+			<kunde>Kunde</kunde>
+			<bereich>Bereich</bereich>
+			<properties>
+				<property> 
+					<key>text</key>
+					<value>Dieser Text wird einfach dargestellt</value>
+				</property> 
+			</properties>
+		</task>
+	</tasks>
+</StatusServer>
